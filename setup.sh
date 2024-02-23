@@ -23,7 +23,7 @@ for file in $files_with_string; do
     sed -i '' -e "s/$search_string/$BUNDLE_ID/g" "$file"
 done
 
-# ./build_ios_tools.sh
+./build_ios_tools.sh
 
 echo "Building docker..."
 docker build -t $DOCKER_TAG .
